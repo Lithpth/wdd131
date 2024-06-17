@@ -39,6 +39,13 @@ main {
     grid-area: main;
     padding: 1rem;
 }
+footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
 
 /* nav menu */
 .nav_menu {

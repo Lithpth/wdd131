@@ -41,12 +41,12 @@ main {
 }
 
 /* nav menu */
-.nav-menu {
+.nav_menu {
     display: flex;
     justify-content: space-around;
 }
 
-.nav-menu li a {
+.nav_menu li a {
     color: #fff;
     padding: 0.5rem 1rem;
 }

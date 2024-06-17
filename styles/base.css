@@ -1,5 +1,11 @@
 /* default */
-body, h1, h2, p, ul, li, a {
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -8,7 +14,7 @@ body, h1, h2, p, ul, li, a {
 
 body {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "header"
         "nav"
         "main"
@@ -35,10 +41,20 @@ nav {
     padding: 1rem;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     grid-area: main;
     padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
+
 footer {
     grid-area: footer;
     background: #333;
@@ -56,17 +72,52 @@ footer {
 .nav_menu li a {
     color: #fff;
     padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav_menu li a:hover {
+    color: #444;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* card */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: max-content;
+}
+
+.card img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.card ul {
+    margin-top: 1rem;
 }
 
 /* view */
 @media (min-width: 768px) {
     body {
-        grid-template-areas: 
+        grid-template-areas:
             "header header"
             "nav nav"
             "main aside"
             "footer footer";
         grid-template-rows: auto auto 1fr auto;
         grid-template-columns: 2fr 1fr;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        /* two columns */
     }
 }

@@ -1,0 +1,44 @@
+/* temples-large.css */
+body {
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 2fr 1fr;
+}
+
+main {
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    nav {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    nav a {
+        flex: 1 1 100%;
+    }
+    .nav_menu {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        
+    }
+}
